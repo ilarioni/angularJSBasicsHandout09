@@ -129,6 +129,20 @@
     <p>In this example you can display both the model and the color of the selected element.</p>
 
 
+    <h3>6 - The Data Source as an Object</h3>
+    <p>In the previous examples the data source was an array, but we can also use an object.</p>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+    <p>Select a car:</p>
+    <select ng-model="selectedCar" ng-options="x for (x, y) in cars">
+    </select>
+        
+    <h1>You selected: {{selectedCar}}</h1>
+    </div>
+
+    <p>This example demonstrates the use of an object as the data source when creating a dropdown list.</p>
+
 
 
 
