@@ -27,7 +27,17 @@
 
     <p>This example shows how to fill a dropdown list using the ng-options directive.</p>
 
-    
+    <h3> 2 - ng-options vs ng-repeat</h3>
+    <p>You can also use the ng-repeat directive to make the same dropdown list:</p>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+    <select>
+    <option ng-repeat="x in names">{{x}}</option>
+    </select>
+    </div>
+
+
     
 </body>
 </html>
