@@ -11,6 +11,23 @@
     <h1> AngularJS Select Boxes </h1>
     <p>AngularJS lets you create dropdown lists based on items in an array, or an object.</p>
 
+    <h3>1 - Creating a Select Box Using ng-options</h3>
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+    <select ng-model="selectedName" ng-options="x for x in names">
+    </select>
+    </div>
+
+    <script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.names = ["Emil", "Tobias", "Linus"];
+    });
+    </script>
+
+    <p>This example shows how to fill a dropdown list using the ng-options directive.</p>
+
+    
     
 </body>
 </html>
