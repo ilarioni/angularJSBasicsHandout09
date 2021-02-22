@@ -38,14 +38,29 @@
     </div>
 
     <script>
-        var app = angular.module('myApp', []);
-        app.controller('myCtrl', function($scope) {
-            $scope.names = ["Emil", "Tobias", "Linus"];
-        });
-        </script>
-    
-        <p>This example shows how to fill a dropdown list using the ng-repeat directive.</p>
-    
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.names = ["Emil", "Tobias", "Linus"];
+    });
+    </script>
+
+    <p>This example shows how to fill a dropdown list using the ng-repeat directive.</p>
+
+    <h3> 3 - What Do I Use?</h3>
+    <p>You can use both the ng-repeat directive and the ng-options directive</p>
+
+    <p>Using ng-repeat:</p>
+
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+    <p>Select a car:</p>
+        
+    <select ng-model="selectedCar">
+    <option ng-repeat="x in cars" value="{{x.model}}">{{x.model}}</option>
+    </select>
+    <h1>You selected: {{selectedCar}}</h1>
+    </div>
+
 
 
     
